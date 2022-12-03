@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\FormsApp\FormsApp\bin\Debug\FormsApp.exe.config
+C:\Users\User\source\repos\FormsApp\FormsApp\bin\Debug\FormsApp.exe
+C:\Users\User\source\repos\FormsApp\FormsApp\bin\Debug\FormsApp.pdb
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.Form1.resources
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.Properties.Resources.resources
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.GenerateResource.cache
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.exe
+C:\Users\User\source\repos\FormsApp\FormsApp\obj\Debug\FormsApp.pdb
