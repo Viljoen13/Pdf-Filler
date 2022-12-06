@@ -22,14 +22,15 @@ namespace FormsApp
             if (!verifyInputInfo())
                 return;
 
-            Client_Information Info = new Client_Information
+            GeneralInfoEntity Info = new GeneralInfoEntity
             {
                 Name = Name_textBox.Text,
                 Surname = Surname_TextBox.Text,
                 Id = ID_no_TextBox.Text
             };
 
-            var test = Info;
+            CovidFormService covidFormService = new CovidFormService(Info);
+            covidFormService.createPdf();
         }
 
         private bool verifyInputInfo()
