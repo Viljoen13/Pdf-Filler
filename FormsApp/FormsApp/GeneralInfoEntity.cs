@@ -12,5 +12,6 @@ namespace FormsApp
         public string Surname { get; set; }
         public string Id { get; set; }
         public string DateOfBirth { get; set; }
+        public string maidenName { get; set; }
     }
 }

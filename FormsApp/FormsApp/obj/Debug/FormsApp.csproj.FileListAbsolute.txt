@@ -20,3 +20,10 @@ C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.
 C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.exe
 C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.pdb
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\bin\Debug\ExcelDataReader.dll
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\bin\Debug\ExcelDataReader.pdb
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\bin\Debug\ExcelDataReader.xml
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\User\source\repos\test\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.CopyComplete
