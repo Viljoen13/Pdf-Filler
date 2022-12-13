@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ExcelDataReader;
 using System.IO;
+using formsApp.service;
 
 namespace FormsApp
 {
@@ -18,12 +19,6 @@ namespace FormsApp
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!verifyInputInfo())
-                return;
         }
 
         private bool verifyInputInfo()
@@ -38,6 +33,8 @@ namespace FormsApp
 
             Dictionary<string, string> person1 = new Dictionary<string, string>();
             Dictionary<string, string> person2 = new Dictionary<string, string>();
+
+            List<GeneralInfoEntity> persons = new List<GeneralInfoEntity>();
 
             using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
             {
@@ -88,10 +85,30 @@ namespace FormsApp
                         grossIncome = person2.FirstOrDefault(c => c.Key == "Gross income").Value
                     };
 
-                    var test = oPerson1;
-                    var test2 = oPerson2;
+                    persons.Add(oPerson1);
+                    
+                    //will have to change this check
+                    if (person2.Any(c => c.Value != "" && c.Value != null))
+                        persons.Add(oPerson2);
                 }
             }
+
+            replacementFileWriter pdfInfo = new replacementFileWriter(persons);
+
+            //Fill edit boxes
+            Name_textBox.Text = persons[0].name;
+            Surname_TextBox.Text = persons[0].surname;
+            ID_no_TextBox.Text = persons[0].id;
+            maidenName_textBox.Text = persons[0].maidenName;
+            occupation_textBox.Text = persons[0].occupation;
+            qualification_textBox.Text = persons[0].qualification;
+            durationOfCourse_textBox.Text = persons[0].durationOfCourse;
+            grossIncome_textBox.Text = persons[0].grossIncome;
+        }
+
+        private void Close_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

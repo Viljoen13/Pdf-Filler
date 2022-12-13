@@ -4,18 +4,22 @@ using iText.Kernel.Pdf;
 using System;
 using System.IO;
 using System.Linq;
+using FormsApp;
+using System.Collections.Generic;
 
 namespace formsApp.service
 {
     public class replacementFileWriter
     {
-        public replacementFileWriter()
+
+        private List<GeneralInfoEntity> info;
+        public replacementFileWriter(List<GeneralInfoEntity> info)
         {
+            this.info = info;
         }
 
         public void createPdfFile()
         {
-
             string Path = Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\resources";
 
             PdfReader reader = null;
@@ -32,22 +36,22 @@ namespace formsApp.service
 
             PdfDocument pdfDocument = new PdfDocument(reader, writer);
 
-            PdfFormField name = PdfFormField.createEmptyField(pdfDocument);
+            //PdfFormField name = PdfFormField.createEmptyField(pdfDocument);
 
-            name.setFieldName("FirstName");
-            //y max value is 792
-            //xmax value is 609
-            //bottom left coner
+            //name.setFieldName("FirstName");
+            ////y max value is 792
+            ////xmax value is 609
+            ////bottom left coner
 
-            PdfTextFormField firstName = PdfTextFormField.createText(pdfDocument, new Rectangle(608, 200, 500, 5),
-                "FirstName", "john");
+            //PdfTextFormField firstName = PdfTextFormField.createText(pdfDocument, new Rectangle(608, 200, 500, 5),
+            //    "FirstName", "john");
 
-            name.addKid(firstName);
+            //name.addKid(firstName);
 
-            pdfDocument.getPage(2);
-            PdfAcroForm.getAcroForm(pdfDocument, true).addField(name, pdfDocument.getFirstPage());
+            //pdfDocument.getPage(2);
+            //PdfAcroForm.getAcroForm(pdfDocument, true).addField(name, pdfDocument.getFirstPage());
 
-            pdfDocument.close();
+            //pdfDocument.close();
         }
     }
 }
