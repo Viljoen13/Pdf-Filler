@@ -24,14 +24,6 @@ namespace FormsApp
         {
             if (!verifyInputInfo())
                 return;
-
-            GeneralInfoEntity Info = new GeneralInfoEntity
-            {
-                Name = Name_textBox.Text,
-                Surname = Surname_TextBox.Text,
-                Id = ID_no_TextBox.Text
-            };
-
         }
 
         private bool verifyInputInfo()
@@ -74,17 +66,30 @@ namespace FormsApp
                     
                     GeneralInfoEntity oPerson1 = new GeneralInfoEntity
                     {                        
-                        Surname = person1.Where(c => c.Key == "Surname").FirstOrDefault().Value,
-                        Name = person1.Where(c => c.Key == "Fulle Names").FirstOrDefault().Value,
-                        Id = person1.Where(c => c.Key == "ID No.:").FirstOrDefault().Value
+                        surname = person1.FirstOrDefault(c => c.Key == "Surname").Value,
+                        name = person1.FirstOrDefault(c => c.Key == "Fulle Names").Value,
+                        id = person1.FirstOrDefault(c => c.Key == "ID No.:").Value,
+                        maidenName = person1.FirstOrDefault(c => c.Key == "Maiden Name").Value,
+                        occupation = person1.FirstOrDefault(c => c.Key == "Occupation").Value,
+                        qualification = person1.FirstOrDefault(c => c.Key == "Qualification").Value,
+                        durationOfCourse = person1.FirstOrDefault(c => c.Key == "Duration of Course").Value,
+                        grossIncome = person1.FirstOrDefault(c => c.Key == "Gross income").Value
                     };
 
                     GeneralInfoEntity oPerson2 = new GeneralInfoEntity
                     {
-                        Name = Name_textBox.Text,
-                        Surname = Surname_TextBox.Text,
-                        Id = ID_no_TextBox.Text
+                        surname = person2.FirstOrDefault(c => c.Key == "Surname").Value,
+                        name = person2.FirstOrDefault(c => c.Key == "Fulle Names").Value,
+                        id = person2.FirstOrDefault(c => c.Key == "ID No.:").Value,
+                        maidenName = person2.FirstOrDefault(c => c.Key == "Maiden Name").Value,
+                        occupation = person2.FirstOrDefault(c => c.Key == "Occupation").Value,
+                        qualification = person2.FirstOrDefault(c => c.Key == "Qualification").Value,
+                        durationOfCourse = person2.FirstOrDefault(c => c.Key == "Duration of Course").Value,
+                        grossIncome = person2.FirstOrDefault(c => c.Key == "Gross income").Value
                     };
+
+                    var test = oPerson1;
+                    var test2 = oPerson2;
                 }
             }
         }

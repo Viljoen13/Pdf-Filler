@@ -8,10 +8,15 @@ namespace FormsApp
 {
     public class GeneralInfoEntity
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Id { get; set; }
-        public string DateOfBirth { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string id { get; set; }
+        public string dateOfBirth { get; set; }
         public string maidenName { get; set; }
+        public string occupation { get; set; }
+        public string qualification { get; set; }
+        public string durationOfCourse { get; set; }
+        public string grossIncome { get; set; }
+
     }
 }
