@@ -1,3 +1,5 @@
 .vs
 *.Cache
 *.cache
+
+[Dd]ebug/
