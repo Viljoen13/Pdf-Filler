@@ -90,8 +90,6 @@ namespace FormsApp
 
                     var test = oPerson1;
                     var test2 = oPerson2;
-
-                    //test
                 }
             }
         }
