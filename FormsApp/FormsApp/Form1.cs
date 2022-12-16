@@ -15,7 +15,7 @@ namespace FormsApp
 {
     public partial class Form1 : Form
     {
-
+        private List<GeneralInfoEntity> persons = new List<GeneralInfoEntity>();
         public Form1()
         {
             InitializeComponent();
@@ -28,13 +28,16 @@ namespace FormsApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+            createForms_btn.Enabled = true;
+
             string filePath = "C:\\Users\\User\\Documents\\CVC_Dev\\Electronic_instruction_page.xlsx"; 
             List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
 
             Dictionary<string, string> person1 = new Dictionary<string, string>();
             Dictionary<string, string> person2 = new Dictionary<string, string>();
 
-            List<GeneralInfoEntity> persons = new List<GeneralInfoEntity>();
+            persons = new List<GeneralInfoEntity>();
 
             using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
             {
@@ -93,8 +96,6 @@ namespace FormsApp
                 }
             }
 
-            replacementFileWriter pdfInfo = new replacementFileWriter(persons);
-
             //Fill edit boxes
             Name_textBox.Text = persons[0].name;
             Surname_TextBox.Text = persons[0].surname;
@@ -110,5 +111,24 @@ namespace FormsApp
         {
             this.Close();
         }
+
+        private void createForms_btn_Click(object sender, EventArgs e)
+        {
+            if (replacementPolicyAdvice_cb.Checked == true)
+            {
+                _ = new replacementFileWriter(persons);
+            }
+
+            if (statementOfHealth_cb.Checked == true)
+            {
+
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            createForms_btn.Enabled = false;
+        }
+
     }
 }

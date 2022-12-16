@@ -47,6 +47,10 @@
             this.durationOfCourse_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Close_btn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.createForms_btn = new System.Windows.Forms.Button();
+            this.statementOfHealth_cb = new System.Windows.Forms.CheckBox();
+            this.replacementPolicyAdvice_cb = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Name_Label
@@ -198,7 +202,7 @@
             // 
             // Close_btn
             // 
-            this.Close_btn.Location = new System.Drawing.Point(835, 134);
+            this.Close_btn.Location = new System.Drawing.Point(835, 232);
             this.Close_btn.Name = "Close_btn";
             this.Close_btn.Size = new System.Drawing.Size(188, 87);
             this.Close_btn.TabIndex = 19;
@@ -206,11 +210,54 @@
             this.Close_btn.UseVisualStyleBackColor = true;
             this.Close_btn.Click += new System.EventHandler(this.Close_btn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(397, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 17);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Create following forms:";
+            // 
+            // createForms_btn
+            // 
+            this.createForms_btn.Location = new System.Drawing.Point(835, 134);
+            this.createForms_btn.Name = "createForms_btn";
+            this.createForms_btn.Size = new System.Drawing.Size(188, 92);
+            this.createForms_btn.TabIndex = 23;
+            this.createForms_btn.Text = "Create forms";
+            this.createForms_btn.UseVisualStyleBackColor = true;
+            this.createForms_btn.Click += new System.EventHandler(this.createForms_btn_Click);
+            // 
+            // statementOfHealth_cb
+            // 
+            this.statementOfHealth_cb.AutoSize = true;
+            this.statementOfHealth_cb.Location = new System.Drawing.Point(391, 121);
+            this.statementOfHealth_cb.Name = "statementOfHealth_cb";
+            this.statementOfHealth_cb.Size = new System.Drawing.Size(153, 21);
+            this.statementOfHealth_cb.TabIndex = 24;
+            this.statementOfHealth_cb.Text = "Statement of health";
+            this.statementOfHealth_cb.UseVisualStyleBackColor = true;
+            // 
+            // replacementPolicyAdvice_cb
+            // 
+            this.replacementPolicyAdvice_cb.AutoSize = true;
+            this.replacementPolicyAdvice_cb.Location = new System.Drawing.Point(391, 148);
+            this.replacementPolicyAdvice_cb.Name = "replacementPolicyAdvice_cb";
+            this.replacementPolicyAdvice_cb.Size = new System.Drawing.Size(248, 26);
+            this.replacementPolicyAdvice_cb.TabIndex = 25;
+            this.replacementPolicyAdvice_cb.Text = "Replacement policy advice";
+            this.replacementPolicyAdvice_cb.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 532);
+            this.Controls.Add(this.replacementPolicyAdvice_cb);
+            this.Controls.Add(this.statementOfHealth_cb);
+            this.Controls.Add(this.createForms_btn);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Close_btn);
             this.Controls.Add(this.durationOfCourse_textBox);
             this.Controls.Add(this.label6);
@@ -232,6 +279,7 @@
             this.Controls.Add(this.Name_Label);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +306,10 @@
         private System.Windows.Forms.TextBox durationOfCourse_textBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Close_btn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button createForms_btn;
+        private System.Windows.Forms.CheckBox statementOfHealth_cb;
+        private System.Windows.Forms.CheckBox replacementPolicyAdvice_cb;
     }
 }
 
