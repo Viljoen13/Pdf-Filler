@@ -2,4 +2,5 @@
 *.Cache
 *.cache
 
-[Dd]ebug/
+Debug/
+Release/
