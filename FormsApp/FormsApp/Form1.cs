@@ -28,31 +28,19 @@ namespace FormsApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int size = -1;
-            string text = "";
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                string file = openFileDialog1.FileName;
-                string path = openFileDialog1.fil
-                try
-                {
-                    text = File.ReadAllText(file);
-                    size = text.Length;
-                }
-                catch (IOException)
-                {
-                }
-            }
-            Console.WriteLine(size); // <-- Shows file size in debugging mode.
-            Console.WriteLine(result); // <-- For debugging use.
-
-
             createForms_btn.Enabled = true;
 
-            //string filePath = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\resources\\Electronic_instruction_page.xlsx";
-            string filePath = text;
+            string file = "";
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            DialogResult result = openFileDialog1.ShowDialog(); 
+            if (result != DialogResult.OK)
+            {
+                MessageBox.Show("cannot open file");
+                return;
+            }
+
+            file = openFileDialog1.FileName;
+            string filePath = file;
             List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
 
             Dictionary<string, string> person1 = new Dictionary<string, string>();
