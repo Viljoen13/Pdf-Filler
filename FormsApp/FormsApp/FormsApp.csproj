@@ -164,6 +164,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="resources\Electronic_instruction_page.xlsx" />
     <None Include="resources\replacement_POLICY_ADVICE.pdf" />
   </ItemGroup>
   <ItemGroup>

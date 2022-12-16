@@ -72,9 +72,10 @@
             // Basic_Information_Label
             // 
             this.Basic_Information_Label.AutoSize = true;
-            this.Basic_Information_Label.Location = new System.Drawing.Point(427, 36);
+            this.Basic_Information_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basic_Information_Label.Location = new System.Drawing.Point(357, 9);
             this.Basic_Information_Label.Name = "Basic_Information_Label";
-            this.Basic_Information_Label.Size = new System.Drawing.Size(116, 17);
+            this.Basic_Information_Label.Size = new System.Drawing.Size(251, 32);
             this.Basic_Information_Label.TabIndex = 3;
             this.Basic_Information_Label.Text = "Basic Information";
             // 
@@ -244,7 +245,7 @@
             this.replacementPolicyAdvice_cb.AutoSize = true;
             this.replacementPolicyAdvice_cb.Location = new System.Drawing.Point(391, 148);
             this.replacementPolicyAdvice_cb.Name = "replacementPolicyAdvice_cb";
-            this.replacementPolicyAdvice_cb.Size = new System.Drawing.Size(248, 26);
+            this.replacementPolicyAdvice_cb.Size = new System.Drawing.Size(198, 21);
             this.replacementPolicyAdvice_cb.TabIndex = 25;
             this.replacementPolicyAdvice_cb.Text = "Replacement policy advice";
             this.replacementPolicyAdvice_cb.UseVisualStyleBackColor = true;
