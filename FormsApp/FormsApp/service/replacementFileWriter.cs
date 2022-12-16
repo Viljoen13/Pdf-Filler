@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using FormsApp;
 using System.Collections.Generic;
+using iText.Kernel.Geom;
+using System.Windows.Forms;
 
 namespace formsApp.service
 {
@@ -16,11 +18,12 @@ namespace formsApp.service
         public replacementFileWriter(List<GeneralInfoEntity> info)
         {
             this.info = info;
+            createPdfFile();
         }
 
         public void createPdfFile()
         {
-            string Path = Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\resources";
+            string Path = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\resources";
 
             PdfReader reader = null;
             PdfWriter writer = null;
@@ -31,27 +34,28 @@ namespace formsApp.service
             }
             catch (IOException e)
             {
-               
+                MessageBox.Show("Close file");
+                return;
             }
 
             //PdfDocument pdfDocument = new PdfDocument(reader, writer);
 
-            //PdfFormField name = PdfFormField.createEmptyField(pdfDocument);
+            PdfFormField name = PdfFormField.CreateEmptyField(pdfDocument);
 
-            //name.setFieldName("FirstName");
-            ////y max value is 792
-            ////xmax value is 609
-            ////bottom left coner
+            name.SetFieldName("FirstName");
+            //y max value is 792
+            //xmax value is 609
+            //bottom left coner
 
-            //PdfTextFormField firstName = PdfTextFormField.createText(pdfDocument, new Rectangle(608, 200, 500, 5),
-            //    "FirstName", "john");
+            PdfTextFormField firstName = PdfTextFormField.CreateText(pdfDocument, new Rectangle(157, 722, 406, 15),
+                "FirstName", info[0].name);
 
-            //name.addKid(firstName);
+            name.AddKid(firstName);
 
-            //pdfDocument.getPage(2);
-            //PdfAcroForm.getAcroForm(pdfDocument, true).addField(name, pdfDocument.getFirstPage());
+            pdfDocument.GetPage(2);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).AddField(name, pdfDocument.GetFirstPage());
 
-            //pdfDocument.close();
+            pdfDocument.Close();
         }
     }
 }

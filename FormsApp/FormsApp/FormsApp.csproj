@@ -166,6 +166,7 @@
     </Compile>
     <None Include="resources\Electronic_instruction_page.xlsx" />
     <None Include="resources\replacement_POLICY_ADVICE.pdf" />
+    <None Include="resources\replacement_POLICY_ADVICE_FILLED.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
