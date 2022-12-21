@@ -166,3 +166,5 @@ C:\Users\amsmi\source\repos\Viljoen13\Pdf-Filler\FormsApp\FormsApp\obj\Debug\For
 C:\Users\amsmi\source\repos\Viljoen13\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.CopyComplete
 C:\Users\amsmi\source\repos\Viljoen13\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.exe
 C:\Users\amsmi\source\repos\Viljoen13\Pdf-Filler\FormsApp\FormsApp\obj\Debug\FormsApp.pdb
+C:\Users\User\source\FormsApp\FormsApp\obj\Debug\FormsApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\FormsApp\FormsApp\obj\Debug\FormsApp.replacement_frontend_form.resources

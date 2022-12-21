@@ -139,5 +139,14 @@ namespace FormsApp
             createForms_btn.Enabled = false;
         }
 
+        private void replacementPolicyAdvice_cb_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (replacementPolicyAdvice_cb.Checked == false)
+                return;
+
+            replacement_frontend_form f2 = new replacement_frontend_form(persons);
+
+            f2.ShowDialog(); // Shows Form2
+        }
     }
 }
