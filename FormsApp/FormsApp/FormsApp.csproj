@@ -132,6 +132,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\replacementEntity.cs" />
     <Compile Include="GeneralInfoEntity.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -175,7 +176,6 @@
     </Compile>
     <None Include="resources\2007_AEB_E.pdf" />
     <None Include="resources\Electronic_instruction_page.xlsx" />
-    <None Include="resources\replacement POLICY ADVICE.pdf" />
     <None Include="resources\replacement_POLICY_ADVICE_FILLED.pdf" />
   </ItemGroup>
   <ItemGroup>

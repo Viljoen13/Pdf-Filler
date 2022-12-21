@@ -125,7 +125,7 @@ namespace FormsApp
         {
             if (replacementPolicyAdvice_cb.Checked == true)
             {
-                _ = new replacementFileWriter(persons);
+                //_ = new replacementFileWriter(persons);
             }
 
             if (statementOfHealth_cb.Checked == true)
