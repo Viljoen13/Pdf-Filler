@@ -144,9 +144,13 @@ namespace FormsApp
             if (replacementPolicyAdvice_cb.Checked == false)
                 return;
 
-            replacement_frontend_form f2 = new replacement_frontend_form(persons);
+            this.Hide();
 
-            f2.ShowDialog(); // Shows Form2
+            replacement_frontend_form replacement_form = new replacement_frontend_form(persons);
+
+            replacement_form.ShowDialog();
+
+            this.Show();
         }
     }
 }

@@ -37,9 +37,9 @@ namespace FormsApp
                 replacedPolicies = new List<string> { tb_replacepolicy1.Text, tb_replacepolicy2.Text, tb_replacepolicy3.Text },
                 replacedInsurers = new List<string> { tb_replaceinsurer1.Text, tb_replaceinsurer2.Text, tb_replaceinsurer3.Text },
                 customerChecks = fill_cbs_cb.Checked,
-                internetCheck = true,
-                telephoneCheck = true,
-                directCheck = true,
+                internetCheck = cb_Internet.Checked,
+                telephoneCheck = cb_Telephone.Checked,
+                directCheck = cb_DirectMarketing.Checked,
                 date = dateTimePicker1.Value,
                 reference = tb_ref_no.Text
             };
@@ -51,22 +51,14 @@ namespace FormsApp
 
         private void replacement_frontend_form_Load(object sender, EventArgs e)
         {
+            
+
             id_client_tb.Text = pInfo.id;
             name_surname_tb.Text = $"{pInfo.name} {pInfo.surname}";
             name_of_rep_tb.Text = "Add";
             fsp_name_tb.Text = "Add";
             fsp_no_tb.Text = "Add";
 
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_replacepolicy2_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
