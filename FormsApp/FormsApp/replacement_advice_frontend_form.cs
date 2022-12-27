@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace FormsApp
 {
-    public partial class replacement_frontend_form : Form
+    public partial class replacement_advice_frontend_form : Form
     {
         private GeneralInfoEntity pInfo;
-        public replacement_frontend_form(List<GeneralInfoEntity> info)
+        public replacement_advice_frontend_form(List<GeneralInfoEntity> info)
         {
             InitializeComponent();
             pInfo = info[0];

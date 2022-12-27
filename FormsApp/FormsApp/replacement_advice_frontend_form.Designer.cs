@@ -1,6 +1,6 @@
 ﻿namespace FormsApp
 {
-    partial class replacement_frontend_form
+    partial class replacement_advice_frontend_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.make_replacement_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.id_client_tb = new System.Windows.Forms.TextBox();
@@ -61,7 +60,6 @@
             this.fill_cbs_cb = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tb_ref_no = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -390,7 +388,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(11, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(700, 23);
+            this.label11.Size = new System.Drawing.Size(560, 18);
             this.label11.TabIndex = 28;
             this.label11.Text = "To be completed if the new business was effected via electronic business";
             // 
@@ -427,7 +425,7 @@
             this.cb_DirectMarketing.Text = "Direct marketing";
             this.cb_DirectMarketing.UseVisualStyleBackColor = true;
             // 
-            // replacement_frontend_form
+            // replacement_advice_frontend_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -455,7 +453,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.make_replacement_btn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "replacement_frontend_form";
+            this.Name = "replacement_advice_frontend_form";
             this.Text = "replacement_frontend_form";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -499,7 +497,6 @@
         private System.Windows.Forms.CheckBox fill_cbs_cb;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox tb_ref_no;
         private System.Windows.Forms.Label label11;

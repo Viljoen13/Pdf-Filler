@@ -146,7 +146,21 @@ namespace FormsApp
 
             this.Hide();
 
-            replacement_frontend_form replacement_form = new replacement_frontend_form(persons);
+            replacement_advice_frontend_form replacement_form = new replacement_advice_frontend_form(persons);
+
+            replacement_form.ShowDialog();
+
+            this.Show();
+        }
+
+        private void cb_replacementAdvice_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_replacementAdvice.Checked == false)
+                return;
+
+            this.Hide();
+
+            ReplacementFrontEndForm replacement_form = new ReplacementFrontEndForm(persons);
 
             replacement_form.ShowDialog();
 
