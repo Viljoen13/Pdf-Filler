@@ -9,13 +9,14 @@ using System.Collections.Generic;
 using iText.Kernel.Geom;
 using System.Windows.Forms;
 using iText.Pdfa;
+using FormsApp.entities;
 
 namespace formsApp.service
 {
     public class replacementFileWriter
     {
 
-        private List<GeneralInfoEntity> info;
+        private replacementEntity info;
 
         private PdfDocument pdfDocument;
 
@@ -55,7 +56,7 @@ namespace formsApp.service
         private static readonly string time = "Time";
         private static readonly string reference = "Text23";
 
-        public replacementFileWriter(List<GeneralInfoEntity> info)
+        public replacementFileWriter(replacementEntity info)
         {
             this.info = info;
             createPdfFile();
@@ -88,43 +89,43 @@ namespace formsApp.service
             ////xmax value is 609
             ////bottom left coner
 
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(phId).SetValue(info[0].id);
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(phName).SetValue(info[0].name + " " + info[0].surname);
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(repName).SetValue("repName");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fspName).SetValue("fspName");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fspNumber).SetValue("2");
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(phId).SetValue(info.id);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(phName).SetValue(info.nameSurname);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(repName).SetValue(info.representative);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fspName).SetValue(info.fspName);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fspNumber).SetValue(info.fspName);
 
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy1).SetValue("policy1");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy2).SetValue("policy2");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy3).SetValue("policy3");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy4).SetValue("policy4");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy5).SetValue("policy5");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy6).SetValue("policy6");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure1).SetValue("insure1");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure2).SetValue("insure2");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure3).SetValue("insure3");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure4).SetValue("insure4");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure5).SetValue("insure5");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure6).SetValue("insure6");
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy1).SetValue(info.newPolicies[0]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy2).SetValue(info.newPolicies[1]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy3).SetValue(info.newPolicies[2]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy4).SetValue(info.replacedPolicies[0]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy5).SetValue(info.replacedPolicies[1]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policy6).SetValue(info.replacedPolicies[2]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure1).SetValue(info.newInsurers[0]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure2).SetValue(info.newInsurers[1]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure3).SetValue(info.newInsurers[2]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure4).SetValue(info.replacedInsurers[0]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure5).SetValue(info.replacedInsurers[1]);
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(insure6).SetValue(info.replacedInsurers[2]);
 
-            checkboxFill(pdfDocument, additionalFeesCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, riskPremiumsCB, CHECK_STYLE, false);
-            checkboxFill(pdfDocument, oddPolicyCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, exclusionsCB, CHECK_STYLE, false);
-            checkboxFill(pdfDocument, investmentGuarantessCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, withDrawCB, CHECK_STYLE, false);
-            checkboxFill(pdfDocument, taxAdvantageCB, CHECK_STYLE, false);
-            checkboxFill(pdfDocument, valueChangeCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, investmentRiskCB, CHECK_STYLE, false);
-            checkboxFill(pdfDocument, amendedCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, replaceCB, CHECK_STYLE, false);
-            checkboxFill(pdfDocument, internetCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, telephoneCB, CHECK_STYLE, true);
-            checkboxFill(pdfDocument, directMarketingCB, CHECK_STYLE, true);
+            checkboxFill(pdfDocument, additionalFeesCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, riskPremiumsCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, oddPolicyCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, exclusionsCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, investmentGuarantessCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, withDrawCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, taxAdvantageCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, valueChangeCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, investmentRiskCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, amendedCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, replaceCB, CHECK_STYLE, info.customerChecks);
+            checkboxFill(pdfDocument, internetCB, CHECK_STYLE, info.internetCheck);
+            checkboxFill(pdfDocument, telephoneCB, CHECK_STYLE, info.telephoneCheck);
+            checkboxFill(pdfDocument, directMarketingCB, CHECK_STYLE, info.directCheck);
 
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(date).SetValue(DateTime.FromOADate(100).ToString());
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(time).SetValue("15:00");
-            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(reference).SetValue("reference");
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(date).SetValue(info.date.ToString("yyyy/MM/dd"));
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(time).SetValue(info.date.ToString("HH:mm"));
+            PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(reference).SetValue(info.reference);
 
             //PdfAcroForm.GetAcroForm(pdfDocument, true).FlattenFields();
 
