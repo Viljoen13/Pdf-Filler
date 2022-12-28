@@ -51,6 +51,7 @@
             this.createForms_btn = new System.Windows.Forms.Button();
             this.statementOfHealth_cb = new System.Windows.Forms.CheckBox();
             this.replacementPolicyAdvice_cb = new System.Windows.Forms.CheckBox();
+            this.cb_replacementAdvice = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Name_Label
@@ -251,11 +252,23 @@
             this.replacementPolicyAdvice_cb.UseVisualStyleBackColor = true;
             this.replacementPolicyAdvice_cb.CheckedChanged += new System.EventHandler(this.replacementPolicyAdvice_cb_CheckedChanged_1);
             // 
+            // cb_replacementAdvice
+            // 
+            this.cb_replacementAdvice.AutoSize = true;
+            this.cb_replacementAdvice.Location = new System.Drawing.Point(391, 174);
+            this.cb_replacementAdvice.Name = "cb_replacementAdvice";
+            this.cb_replacementAdvice.Size = new System.Drawing.Size(149, 20);
+            this.cb_replacementAdvice.TabIndex = 26;
+            this.cb_replacementAdvice.Text = "Replacement policy";
+            this.cb_replacementAdvice.UseVisualStyleBackColor = true;
+            this.cb_replacementAdvice.CheckedChanged += new System.EventHandler(this.cb_replacementAdvice_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 532);
+            this.Controls.Add(this.cb_replacementAdvice);
             this.Controls.Add(this.replacementPolicyAdvice_cb);
             this.Controls.Add(this.statementOfHealth_cb);
             this.Controls.Add(this.createForms_btn);
@@ -312,6 +325,7 @@
         private System.Windows.Forms.Button createForms_btn;
         private System.Windows.Forms.CheckBox statementOfHealth_cb;
         private System.Windows.Forms.CheckBox replacementPolicyAdvice_cb;
+        private System.Windows.Forms.CheckBox cb_replacementAdvice;
     }
 }
 
