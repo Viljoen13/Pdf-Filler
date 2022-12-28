@@ -135,30 +135,30 @@
     <Compile Include="entities\replacementEntity.cs" />
     <Compile Include="entities\replacementLongEntity.cs" />
     <Compile Include="entities\replacementShortEntity.cs" />
-    <Compile Include="GeneralInfoEntity.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="entities\GeneralInfoEntity.cs" />
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PolicyDetails.cs" />
+    <Compile Include="entities\PolicyDot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReplacementFrontEndForm.cs">
+    <Compile Include="Forms\ReplacementFrontEndForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReplacementFrontEndForm.Designer.cs">
+    <Compile Include="Forms\ReplacementFrontEndForm.Designer.cs">
       <DependentUpon>ReplacementFrontEndForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="replacement_advice_frontend_form.cs">
+    <Compile Include="Forms\replacement_advice_frontend_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="replacement_advice_frontend_form.Designer.cs">
+    <Compile Include="Forms\replacement_advice_frontend_form.Designer.cs">
       <DependentUpon>replacement_advice_frontend_form.cs</DependentUpon>
     </Compile>
     <Compile Include="service\replacementFileWriter.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -170,10 +170,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReplacementFrontEndForm.resx">
+    <EmbeddedResource Include="Forms\ReplacementFrontEndForm.resx">
       <DependentUpon>ReplacementFrontEndForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="replacement_advice_frontend_form.resx">
+    <EmbeddedResource Include="Forms\replacement_advice_frontend_form.resx">
       <DependentUpon>replacement_advice_frontend_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -188,7 +188,7 @@
     </Compile>
     <None Include="resources\2007_AEB_E.pdf" />
     <None Include="resources\Electronic_instruction_page.xlsx" />
-    <None Include="resources\replacement_POLICY_ADVICE_FILLED.pdf" />
+    <None Include="resources\replacement_POLICY_ADVICE.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

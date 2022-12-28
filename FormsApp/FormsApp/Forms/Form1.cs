@@ -17,7 +17,7 @@ namespace FormsApp
     {
         private List<GeneralInfoEntity> persons = new List<GeneralInfoEntity>();
 
-        private PolicyDetails policyDetails;
+        private PolicyDetailsDot policyDot = new PolicyDetailsDot();
         public Form1()
         {
             InitializeComponent();
@@ -146,16 +146,20 @@ namespace FormsApp
             if (replacementPolicyAdvice_cb.Checked == false)
                 return;
 
+            policyDot.nameOfRep = tb_NameOfRep.Text;
+            policyDot.fspName = tb_FSPName.Text;
+            policyDot.fspNo = tb_FSPNo.Text;
+
             this.Hide();
 
-            replacement_advice_frontend_form replacement_form = new replacement_advice_frontend_form(persons, policyDetails);
-
-            if (policyDetails == null)
-                policyDetails = replacement_form.policyDetails;
+            replacement_advice_frontend_form replacement_form = new replacement_advice_frontend_form(persons, policyDot);
 
             replacement_form.ShowDialog();
 
             this.Show();
+
+            if (policyDot.newPolicies == null || policyDot.policyReplaced == null)
+                policyDot = replacement_form.policyDot;
         }
 
         private void cb_replacementAdvice_CheckedChanged(object sender, EventArgs e)
@@ -163,16 +167,20 @@ namespace FormsApp
             if (cb_replacementAdvice.Checked == false)
                 return;
 
+            policyDot.nameOfRep = tb_NameOfRep.Text;
+            policyDot.fspName = tb_FSPName.Text;
+            policyDot.fspNo = tb_FSPNo.Text;
+
             this.Hide();
 
-            ReplacementFrontEndForm replacement_form = new ReplacementFrontEndForm(persons, policyDetails);
-
-            if (policyDetails == null)
-                policyDetails = replacement_form.policyDetails;
+            ReplacementFrontEndForm replacement_form = new ReplacementFrontEndForm(persons, policyDot);
 
             replacement_form.ShowDialog();
 
             this.Show();
+
+            if (policyDot.newPolicies == null || policyDot.policyReplaced == null)
+                policyDot = replacement_form.policyDot;
         }
     }
 }

@@ -52,12 +52,22 @@
             this.statementOfHealth_cb = new System.Windows.Forms.CheckBox();
             this.replacementPolicyAdvice_cb = new System.Windows.Forms.CheckBox();
             this.cb_replacementAdvice = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_FSPName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tb_FSPNo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tb_NameOfRep = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Name_Label
             // 
             this.Name_Label.AutoSize = true;
-            this.Name_Label.Location = new System.Drawing.Point(21, 87);
+            this.Name_Label.Location = new System.Drawing.Point(31, 32);
             this.Name_Label.Name = "Name_Label";
             this.Name_Label.Size = new System.Drawing.Size(47, 16);
             this.Name_Label.TabIndex = 0;
@@ -65,7 +75,7 @@
             // 
             // Name_textBox
             // 
-            this.Name_textBox.Location = new System.Drawing.Point(148, 87);
+            this.Name_textBox.Location = new System.Drawing.Point(158, 32);
             this.Name_textBox.Name = "Name_textBox";
             this.Name_textBox.Size = new System.Drawing.Size(136, 22);
             this.Name_textBox.TabIndex = 2;
@@ -82,7 +92,7 @@
             // 
             // Surname_TextBox
             // 
-            this.Surname_TextBox.Location = new System.Drawing.Point(148, 125);
+            this.Surname_TextBox.Location = new System.Drawing.Point(158, 69);
             this.Surname_TextBox.Name = "Surname_TextBox";
             this.Surname_TextBox.Size = new System.Drawing.Size(136, 22);
             this.Surname_TextBox.TabIndex = 5;
@@ -90,7 +100,7 @@
             // Surname_Label
             // 
             this.Surname_Label.AutoSize = true;
-            this.Surname_Label.Location = new System.Drawing.Point(21, 130);
+            this.Surname_Label.Location = new System.Drawing.Point(31, 69);
             this.Surname_Label.Name = "Surname_Label";
             this.Surname_Label.Size = new System.Drawing.Size(64, 16);
             this.Surname_Label.TabIndex = 4;
@@ -98,7 +108,7 @@
             // 
             // ID_no_TextBox
             // 
-            this.ID_no_TextBox.Location = new System.Drawing.Point(148, 174);
+            this.ID_no_TextBox.Location = new System.Drawing.Point(158, 106);
             this.ID_no_TextBox.Name = "ID_no_TextBox";
             this.ID_no_TextBox.Size = new System.Drawing.Size(136, 22);
             this.ID_no_TextBox.TabIndex = 7;
@@ -106,7 +116,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 179);
+            this.label1.Location = new System.Drawing.Point(31, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 6;
@@ -124,7 +134,7 @@
             // 
             // maidenName_textBox
             // 
-            this.maidenName_textBox.Location = new System.Drawing.Point(148, 240);
+            this.maidenName_textBox.Location = new System.Drawing.Point(158, 144);
             this.maidenName_textBox.Name = "maidenName_textBox";
             this.maidenName_textBox.Size = new System.Drawing.Size(136, 22);
             this.maidenName_textBox.TabIndex = 10;
@@ -132,7 +142,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 241);
+            this.label2.Location = new System.Drawing.Point(31, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 9;
@@ -140,7 +150,7 @@
             // 
             // occupation_textBox
             // 
-            this.occupation_textBox.Location = new System.Drawing.Point(148, 282);
+            this.occupation_textBox.Location = new System.Drawing.Point(158, 186);
             this.occupation_textBox.Name = "occupation_textBox";
             this.occupation_textBox.Size = new System.Drawing.Size(136, 22);
             this.occupation_textBox.TabIndex = 12;
@@ -148,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 283);
+            this.label3.Location = new System.Drawing.Point(31, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 11;
@@ -156,7 +166,7 @@
             // 
             // qualification_textBox
             // 
-            this.qualification_textBox.Location = new System.Drawing.Point(148, 325);
+            this.qualification_textBox.Location = new System.Drawing.Point(158, 225);
             this.qualification_textBox.Name = "qualification_textBox";
             this.qualification_textBox.Size = new System.Drawing.Size(136, 22);
             this.qualification_textBox.TabIndex = 14;
@@ -164,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 326);
+            this.label4.Location = new System.Drawing.Point(31, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 13;
@@ -172,7 +182,7 @@
             // 
             // grossIncome_textBox
             // 
-            this.grossIncome_textBox.Location = new System.Drawing.Point(148, 411);
+            this.grossIncome_textBox.Location = new System.Drawing.Point(158, 314);
             this.grossIncome_textBox.Name = "grossIncome_textBox";
             this.grossIncome_textBox.Size = new System.Drawing.Size(136, 22);
             this.grossIncome_textBox.TabIndex = 16;
@@ -180,7 +190,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 412);
+            this.label5.Location = new System.Drawing.Point(31, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 16);
             this.label5.TabIndex = 15;
@@ -188,7 +198,7 @@
             // 
             // durationOfCourse_textBox
             // 
-            this.durationOfCourse_textBox.Location = new System.Drawing.Point(148, 369);
+            this.durationOfCourse_textBox.Location = new System.Drawing.Point(158, 269);
             this.durationOfCourse_textBox.Name = "durationOfCourse_textBox";
             this.durationOfCourse_textBox.Size = new System.Drawing.Size(136, 22);
             this.durationOfCourse_textBox.TabIndex = 18;
@@ -196,7 +206,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 370);
+            this.label6.Location = new System.Drawing.Point(31, 269);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 16);
             this.label6.TabIndex = 17;
@@ -263,38 +273,116 @@
             this.cb_replacementAdvice.UseVisualStyleBackColor = true;
             this.cb_replacementAdvice.CheckedChanged += new System.EventHandler(this.cb_replacementAdvice_CheckedChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Name_textBox);
+            this.groupBox1.Controls.Add(this.Name_Label);
+            this.groupBox1.Controls.Add(this.Surname_Label);
+            this.groupBox1.Controls.Add(this.Surname_TextBox);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.ID_no_TextBox);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.durationOfCourse_textBox);
+            this.groupBox1.Controls.Add(this.maidenName_textBox);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.grossIncome_textBox);
+            this.groupBox1.Controls.Add(this.occupation_textBox);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.qualification_textBox);
+            this.groupBox1.Location = new System.Drawing.Point(12, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(339, 359);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "General Information";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tb_FSPNo);
+            this.groupBox2.Controls.Add(this.tb_NameOfRep);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tb_FSPName);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Location = new System.Drawing.Point(12, 386);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(339, 161);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Company Information";
+            // 
+            // tb_FSPName
+            // 
+            this.tb_FSPName.Location = new System.Drawing.Point(158, 74);
+            this.tb_FSPName.Name = "tb_FSPName";
+            this.tb_FSPName.Size = new System.Drawing.Size(136, 22);
+            this.tb_FSPName.TabIndex = 30;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 16);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "FSP Name";
+            // 
+            // tb_FSPNo
+            // 
+            this.tb_FSPNo.Location = new System.Drawing.Point(158, 112);
+            this.tb_FSPNo.Name = "tb_FSPNo";
+            this.tb_FSPNo.Size = new System.Drawing.Size(136, 22);
+            this.tb_FSPNo.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "FSP Number";
+            // 
+            // tb_NameOfRep
+            // 
+            this.tb_NameOfRep.Location = new System.Drawing.Point(158, 32);
+            this.tb_NameOfRep.Name = "tb_NameOfRep";
+            this.tb_NameOfRep.Size = new System.Drawing.Size(136, 22);
+            this.tb_NameOfRep.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 16);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Name of representative";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 532);
+            this.ClientSize = new System.Drawing.Size(1038, 559);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cb_replacementAdvice);
             this.Controls.Add(this.replacementPolicyAdvice_cb);
             this.Controls.Add(this.statementOfHealth_cb);
             this.Controls.Add(this.createForms_btn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Close_btn);
-            this.Controls.Add(this.durationOfCourse_textBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.grossIncome_textBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.qualification_textBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.occupation_textBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.maidenName_textBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ID_no_TextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Surname_TextBox);
-            this.Controls.Add(this.Surname_Label);
             this.Controls.Add(this.Basic_Information_Label);
-            this.Controls.Add(this.Name_textBox);
-            this.Controls.Add(this.Name_Label);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,6 +414,14 @@
         private System.Windows.Forms.CheckBox statementOfHealth_cb;
         private System.Windows.Forms.CheckBox replacementPolicyAdvice_cb;
         private System.Windows.Forms.CheckBox cb_replacementAdvice;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tb_NameOfRep;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tb_FSPName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tb_FSPNo;
+        private System.Windows.Forms.Label label9;
     }
 }
 
