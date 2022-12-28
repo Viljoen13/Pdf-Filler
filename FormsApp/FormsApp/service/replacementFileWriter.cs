@@ -16,7 +16,7 @@ namespace formsApp.service
     public class replacementFileWriter
     {
 
-        private replacementEntity info;
+        private replacementShortEntity info;
 
         private PdfDocument pdfDocument;
 
@@ -56,7 +56,7 @@ namespace formsApp.service
         private static readonly string time = "Time";
         private static readonly string reference = "Text23";
 
-        public replacementFileWriter(replacementEntity info)
+        public replacementFileWriter(replacementShortEntity info)
         {
             this.info = info;
             createPdfFile();
@@ -123,6 +123,8 @@ namespace formsApp.service
             checkboxFill(pdfDocument, telephoneCB, CHECK_STYLE, info.telephoneCheck);
             checkboxFill(pdfDocument, directMarketingCB, CHECK_STYLE, info.directCheck);
 
+            checkboxFill(pdfDocument, additionalFeesCB, CHECK_STYLE, false);
+
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(date).SetValue(info.date.ToString("yyyy/MM/dd"));
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(time).SetValue(info.date.ToString("HH:mm"));
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(reference).SetValue(info.reference);
@@ -139,7 +141,6 @@ namespace formsApp.service
             {
                 PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fieldName).SetCheckType(checkStyle).SetValue("");
             }
-            
         }
     }
 }

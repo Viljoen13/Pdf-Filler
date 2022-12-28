@@ -25,7 +25,7 @@ namespace FormsApp
         {
             //send through all information to replacement service
 
-            var data = new replacementEntity
+            var data = new replacementShortEntity
             {
                 nameSurname = name_surname_tb.Text,
                 id = id_client_tb.Text,
