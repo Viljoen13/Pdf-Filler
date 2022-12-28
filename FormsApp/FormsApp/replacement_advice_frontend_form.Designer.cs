@@ -455,6 +455,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "replacement_advice_frontend_form";
             this.Text = "replacement_frontend_form";
+            this.Load += new System.EventHandler(this.replacement_advice_frontend_form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

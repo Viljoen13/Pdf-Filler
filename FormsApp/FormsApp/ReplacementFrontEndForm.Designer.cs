@@ -41,6 +41,26 @@
             this.make_replacement_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_replaceinsurer3 = new System.Windows.Forms.TextBox();
+            this.tb_replacepolicy3 = new System.Windows.Forms.TextBox();
+            this.tb_replaceinsurer2 = new System.Windows.Forms.TextBox();
+            this.tb_replacepolicy2 = new System.Windows.Forms.TextBox();
+            this.tb_replaceinsurer1 = new System.Windows.Forms.TextBox();
+            this.tb_replacepolicy1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_insurer3 = new System.Windows.Forms.TextBox();
+            this.tb_policy3 = new System.Windows.Forms.TextBox();
+            this.tb_insurer2 = new System.Windows.Forms.TextBox();
+            this.tb_policy2 = new System.Windows.Forms.TextBox();
+            this.tb_insurer1 = new System.Windows.Forms.TextBox();
+            this.tb_policy1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fsp_no_tb
@@ -130,7 +150,7 @@
             // 
             // make_replacement_btn
             // 
-            this.make_replacement_btn.Location = new System.Drawing.Point(842, 408);
+            this.make_replacement_btn.Location = new System.Drawing.Point(1075, 594);
             this.make_replacement_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.make_replacement_btn.Name = "make_replacement_btn";
             this.make_replacement_btn.Size = new System.Drawing.Size(181, 119);
@@ -156,11 +176,183 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(251, 22);
             this.dateTimePicker1.TabIndex = 27;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tb_replaceinsurer3);
+            this.groupBox2.Controls.Add(this.tb_replacepolicy3);
+            this.groupBox2.Controls.Add(this.tb_replaceinsurer2);
+            this.groupBox2.Controls.Add(this.tb_replacepolicy2);
+            this.groupBox2.Controls.Add(this.tb_replaceinsurer1);
+            this.groupBox2.Controls.Add(this.tb_replacepolicy1);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Location = new System.Drawing.Point(764, 229);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(492, 196);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Policy being replaced";
+            // 
+            // tb_replaceinsurer3
+            // 
+            this.tb_replaceinsurer3.Location = new System.Drawing.Point(268, 145);
+            this.tb_replaceinsurer3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_replaceinsurer3.Name = "tb_replaceinsurer3";
+            this.tb_replaceinsurer3.Size = new System.Drawing.Size(203, 22);
+            this.tb_replaceinsurer3.TabIndex = 18;
+            // 
+            // tb_replacepolicy3
+            // 
+            this.tb_replacepolicy3.Location = new System.Drawing.Point(5, 145);
+            this.tb_replacepolicy3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_replacepolicy3.Name = "tb_replacepolicy3";
+            this.tb_replacepolicy3.Size = new System.Drawing.Size(203, 22);
+            this.tb_replacepolicy3.TabIndex = 19;
+            // 
+            // tb_replaceinsurer2
+            // 
+            this.tb_replaceinsurer2.Location = new System.Drawing.Point(268, 106);
+            this.tb_replaceinsurer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_replaceinsurer2.Name = "tb_replaceinsurer2";
+            this.tb_replaceinsurer2.Size = new System.Drawing.Size(203, 22);
+            this.tb_replaceinsurer2.TabIndex = 20;
+            // 
+            // tb_replacepolicy2
+            // 
+            this.tb_replacepolicy2.Location = new System.Drawing.Point(5, 106);
+            this.tb_replacepolicy2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_replacepolicy2.Name = "tb_replacepolicy2";
+            this.tb_replacepolicy2.Size = new System.Drawing.Size(203, 22);
+            this.tb_replacepolicy2.TabIndex = 21;
+            // 
+            // tb_replaceinsurer1
+            // 
+            this.tb_replaceinsurer1.Location = new System.Drawing.Point(268, 66);
+            this.tb_replaceinsurer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_replaceinsurer1.Name = "tb_replaceinsurer1";
+            this.tb_replaceinsurer1.Size = new System.Drawing.Size(203, 22);
+            this.tb_replaceinsurer1.TabIndex = 17;
+            // 
+            // tb_replacepolicy1
+            // 
+            this.tb_replacepolicy1.Location = new System.Drawing.Point(5, 66);
+            this.tb_replacepolicy1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_replacepolicy1.Name = "tb_replacepolicy1";
+            this.tb_replacepolicy1.Size = new System.Drawing.Size(203, 22);
+            this.tb_replacepolicy1.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(344, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Insurer";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(176, 16);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Policy or application number";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tb_insurer3);
+            this.groupBox1.Controls.Add(this.tb_policy3);
+            this.groupBox1.Controls.Add(this.tb_insurer2);
+            this.groupBox1.Controls.Add(this.tb_policy2);
+            this.groupBox1.Controls.Add(this.tb_insurer1);
+            this.groupBox1.Controls.Add(this.tb_policy1);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Location = new System.Drawing.Point(764, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(492, 190);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "New Policy";
+            // 
+            // tb_insurer3
+            // 
+            this.tb_insurer3.Location = new System.Drawing.Point(268, 145);
+            this.tb_insurer3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_insurer3.Name = "tb_insurer3";
+            this.tb_insurer3.Size = new System.Drawing.Size(203, 22);
+            this.tb_insurer3.TabIndex = 18;
+            // 
+            // tb_policy3
+            // 
+            this.tb_policy3.Location = new System.Drawing.Point(5, 145);
+            this.tb_policy3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_policy3.Name = "tb_policy3";
+            this.tb_policy3.Size = new System.Drawing.Size(203, 22);
+            this.tb_policy3.TabIndex = 19;
+            // 
+            // tb_insurer2
+            // 
+            this.tb_insurer2.Location = new System.Drawing.Point(268, 106);
+            this.tb_insurer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_insurer2.Name = "tb_insurer2";
+            this.tb_insurer2.Size = new System.Drawing.Size(203, 22);
+            this.tb_insurer2.TabIndex = 20;
+            // 
+            // tb_policy2
+            // 
+            this.tb_policy2.Location = new System.Drawing.Point(5, 106);
+            this.tb_policy2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_policy2.Name = "tb_policy2";
+            this.tb_policy2.Size = new System.Drawing.Size(203, 22);
+            this.tb_policy2.TabIndex = 21;
+            // 
+            // tb_insurer1
+            // 
+            this.tb_insurer1.Location = new System.Drawing.Point(268, 66);
+            this.tb_insurer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_insurer1.Name = "tb_insurer1";
+            this.tb_insurer1.Size = new System.Drawing.Size(203, 22);
+            this.tb_insurer1.TabIndex = 17;
+            // 
+            // tb_policy1
+            // 
+            this.tb_policy1.Location = new System.Drawing.Point(5, 66);
+            this.tb_policy1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_policy1.Name = "tb_policy1";
+            this.tb_policy1.Size = new System.Drawing.Size(203, 22);
+            this.tb_policy1.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(344, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 16);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Insurer";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 16);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Policy or application number";
+            // 
             // ReplacementFrontEndForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 538);
+            this.ClientSize = new System.Drawing.Size(1268, 724);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.make_replacement_btn);
@@ -177,6 +369,10 @@
             this.Name = "ReplacementFrontEndForm";
             this.Text = "ReplacementFrontEndForm";
             this.Load += new System.EventHandler(this.ReplacementFrontEndForm_Load);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +393,23 @@
         private System.Windows.Forms.Button make_replacement_btn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tb_replaceinsurer3;
+        private System.Windows.Forms.TextBox tb_replacepolicy3;
+        private System.Windows.Forms.TextBox tb_replaceinsurer2;
+        private System.Windows.Forms.TextBox tb_replacepolicy2;
+        private System.Windows.Forms.TextBox tb_replaceinsurer1;
+        private System.Windows.Forms.TextBox tb_replacepolicy1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tb_insurer3;
+        private System.Windows.Forms.TextBox tb_policy3;
+        private System.Windows.Forms.TextBox tb_insurer2;
+        private System.Windows.Forms.TextBox tb_policy2;
+        private System.Windows.Forms.TextBox tb_insurer1;
+        private System.Windows.Forms.TextBox tb_policy1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
     }
 }

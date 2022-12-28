@@ -16,6 +16,8 @@ namespace FormsApp
     public partial class Form1 : Form
     {
         private List<GeneralInfoEntity> persons = new List<GeneralInfoEntity>();
+
+        private PolicyDetails policyDetails;
         public Form1()
         {
             InitializeComponent();
@@ -146,7 +148,10 @@ namespace FormsApp
 
             this.Hide();
 
-            replacement_advice_frontend_form replacement_form = new replacement_advice_frontend_form(persons);
+            replacement_advice_frontend_form replacement_form = new replacement_advice_frontend_form(persons, policyDetails);
+
+            if (policyDetails == null)
+                policyDetails = replacement_form.policyDetails;
 
             replacement_form.ShowDialog();
 
@@ -160,7 +165,10 @@ namespace FormsApp
 
             this.Hide();
 
-            ReplacementFrontEndForm replacement_form = new ReplacementFrontEndForm(persons);
+            ReplacementFrontEndForm replacement_form = new ReplacementFrontEndForm(persons, policyDetails);
+
+            if (policyDetails == null)
+                policyDetails = replacement_form.policyDetails;
 
             replacement_form.ShowDialog();
 
