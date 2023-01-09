@@ -17,6 +17,8 @@ namespace FormsApp
         public string qualification { get; set; }
         public string durationOfCourse { get; set; }
         public string grossIncome { get; set; }
-
+        public string nameOfRepresentative { get; set; }
+        public string fspName { get; set; }
+        public string fspNumber { get; set; }
     }
 }

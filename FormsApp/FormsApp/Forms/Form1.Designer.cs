@@ -63,6 +63,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cb_OddsExcel = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gb_CreateForms.SuspendLayout();
@@ -374,12 +375,13 @@
             // 
             // gb_CreateForms
             // 
+            this.gb_CreateForms.Controls.Add(this.cb_OddsExcel);
             this.gb_CreateForms.Controls.Add(this.statementOfHealth_cb);
             this.gb_CreateForms.Controls.Add(this.replacementPolicyAdvice_cb);
             this.gb_CreateForms.Controls.Add(this.cb_replacementAdvice);
             this.gb_CreateForms.Location = new System.Drawing.Point(46, 96);
             this.gb_CreateForms.Name = "gb_CreateForms";
-            this.gb_CreateForms.Size = new System.Drawing.Size(242, 131);
+            this.gb_CreateForms.Size = new System.Drawing.Size(242, 154);
             this.gb_CreateForms.TabIndex = 30;
             this.gb_CreateForms.TabStop = false;
             this.gb_CreateForms.Text = "Create following forms";
@@ -414,6 +416,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(326, 559);
             this.panel3.TabIndex = 33;
+            // 
+            // cb_OddsExcel
+            // 
+            this.cb_OddsExcel.AutoSize = true;
+            this.cb_OddsExcel.Location = new System.Drawing.Point(18, 115);
+            this.cb_OddsExcel.Name = "cb_OddsExcel";
+            this.cb_OddsExcel.Size = new System.Drawing.Size(168, 25);
+            this.cb_OddsExcel.TabIndex = 27;
+            this.cb_OddsExcel.Text = "Odds Excel sheet";
+            this.cb_OddsExcel.UseVisualStyleBackColor = true;
+            this.cb_OddsExcel.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
@@ -477,6 +490,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox cb_OddsExcel;
     }
 }
 

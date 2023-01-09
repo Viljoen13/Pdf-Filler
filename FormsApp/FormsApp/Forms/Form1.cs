@@ -74,9 +74,9 @@ namespace FormsApp
                             counter++;
                         }
                     } while (reader.NextResult());
-                    
+
                     GeneralInfoEntity oPerson1 = new GeneralInfoEntity
-                    {                        
+                    {
                         surname = person1.FirstOrDefault(c => c.Key == "Surname").Value,
                         name = person1.FirstOrDefault(c => c.Key == "Fulle Names").Value,
                         id = person1.FirstOrDefault(c => c.Key == "ID No.:").Value,
@@ -84,7 +84,10 @@ namespace FormsApp
                         occupation = person1.FirstOrDefault(c => c.Key == "Occupation").Value,
                         qualification = person1.FirstOrDefault(c => c.Key == "Qualification").Value,
                         durationOfCourse = person1.FirstOrDefault(c => c.Key == "Duration of Course").Value,
-                        grossIncome = person1.FirstOrDefault(c => c.Key == "Gross income").Value
+                        grossIncome = person1.FirstOrDefault(c => c.Key == "Gross income").Value,
+                        nameOfRepresentative = string.IsNullOrEmpty(tb_NameOfRep.Text) ? tb_NameOfRep.Text : "",
+                        fspName = string.IsNullOrEmpty(tb_FSPName.Text) ? tb_FSPName.Text : "",
+                        fspNumber = string.IsNullOrEmpty(tb_FSPNo.Text) ? tb_FSPNo.Text : ""
                     };
 
                     GeneralInfoEntity oPerson2 = new GeneralInfoEntity
@@ -96,7 +99,10 @@ namespace FormsApp
                         occupation = person2.FirstOrDefault(c => c.Key == "Occupation").Value,
                         qualification = person2.FirstOrDefault(c => c.Key == "Qualification").Value,
                         durationOfCourse = person2.FirstOrDefault(c => c.Key == "Duration of Course").Value,
-                        grossIncome = person2.FirstOrDefault(c => c.Key == "Gross income").Value
+                        grossIncome = person2.FirstOrDefault(c => c.Key == "Gross income").Value,
+                        nameOfRepresentative = string.IsNullOrEmpty(tb_NameOfRep.Text) ? tb_NameOfRep.Text : "",
+                        fspName = string.IsNullOrEmpty(tb_FSPName.Text) ? tb_FSPName.Text : "",
+                        fspNumber = string.IsNullOrEmpty(tb_FSPNo.Text) ? tb_FSPNo.Text : ""
                     };
 
                     persons.Add(oPerson1);
@@ -210,6 +216,26 @@ namespace FormsApp
             cb_replacementAdvice.Checked = false;
 
             gb_CreateForms.Enabled = false;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_OddsExcel.Checked == false)
+                return;
+
+            if (!verifyInputInfo())
+            {
+                MessageBox.Show("Filled in information is incorrect");
+                return;
+            }
+
+            this.Hide();
+
+            OddsExcel oddsExcelForm = new OddsExcel(persons);
+
+            oddsExcelForm.ShowDialog();
+
+            this.Show();
         }
     }
 }

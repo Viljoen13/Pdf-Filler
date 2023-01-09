@@ -72,7 +72,7 @@
             // 
             // make_replacement_btn
             // 
-            this.make_replacement_btn.Location = new System.Drawing.Point(1056, 447);
+            this.make_replacement_btn.Location = new System.Drawing.Point(1056, 466);
             this.make_replacement_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.make_replacement_btn.Name = "make_replacement_btn";
             this.make_replacement_btn.Size = new System.Drawing.Size(181, 119);

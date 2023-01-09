@@ -132,6 +132,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\oddsExcelEntity.cs" />
     <Compile Include="entities\replacementEntity.cs" />
     <Compile Include="entities\replacementLongEntity.cs" />
     <Compile Include="entities\replacementShortEntity.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="Forms\replacement_advice_frontend_form.Designer.cs">
       <DependentUpon>replacement_advice_frontend_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="service\excelFileWriter.cs" />
     <Compile Include="service\replacementFileWriter.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -197,6 +199,7 @@
     </Compile>
     <None Include="resources\2007_AEB_E.pdf" />
     <None Include="resources\Electronic_instruction_page.xlsx" />
+    <None Include="resources\ODDS.xlsx" />
     <None Include="resources\replacement_POLICY_ADVICE.pdf" />
   </ItemGroup>
   <ItemGroup>
