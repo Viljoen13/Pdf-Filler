@@ -30,18 +30,18 @@ namespace FormsApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            createForms_btn.Enabled = true;
+            clearInfo();
 
             string file = "";
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            DialogResult result = openFileDialog1.ShowDialog(); 
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            DialogResult result = openFileDialog.ShowDialog(); 
             if (result != DialogResult.OK)
             {
-                MessageBox.Show("cannot open file");
+                MessageBox.Show("Cannot open file");
                 return;
             }
 
-            file = openFileDialog1.FileName;
+            file = openFileDialog.FileName;
             string filePath = file;
             List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
 
@@ -116,6 +116,8 @@ namespace FormsApp
             qualification_textBox.Text = persons[0].qualification;
             durationOfCourse_textBox.Text = persons[0].durationOfCourse;
             grossIncome_textBox.Text = persons[0].grossIncome;
+
+            gb_CreateForms.Enabled = true;
         }
 
         private void Close_btn_Click(object sender, EventArgs e)
@@ -123,28 +125,21 @@ namespace FormsApp
             this.Close();
         }
 
-        private void createForms_btn_Click(object sender, EventArgs e)
-        {
-            if (replacementPolicyAdvice_cb.Checked == true)
-            {
-                //_ = new replacementFileWriter(persons);
-            }
-
-            if (statementOfHealth_cb.Checked == true)
-            {
-
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            createForms_btn.Enabled = false;
+            gb_CreateForms.Enabled = false;
         }
 
         private void replacementPolicyAdvice_cb_CheckedChanged_1(object sender, EventArgs e)
         {
             if (replacementPolicyAdvice_cb.Checked == false)
                 return;
+
+            if (!verifyInputInfo())
+            {
+                MessageBox.Show("Filled in information is incorrect");
+                return;
+            }
 
             policyDot.nameOfRep = tb_NameOfRep.Text;
             policyDot.fspName = tb_FSPName.Text;
@@ -167,6 +162,12 @@ namespace FormsApp
             if (cb_replacementAdvice.Checked == false)
                 return;
 
+            if (!verifyInputInfo())
+            {
+                MessageBox.Show("Filled in information is incorrect");
+                return;
+            }
+
             policyDot.nameOfRep = tb_NameOfRep.Text;
             policyDot.fspName = tb_FSPName.Text;
             policyDot.fspNo = tb_FSPNo.Text;
@@ -181,6 +182,34 @@ namespace FormsApp
 
             if (policyDot.newPolicies == null || policyDot.policyReplaced == null)
                 policyDot = replacement_form.policyDot;
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            clearInfo();
+        }
+
+        private void clearInfo()
+        {
+            policyDot = new PolicyDetailsDot();
+            persons = new List<GeneralInfoEntity>();
+
+            Name_textBox.Text = "";
+            Surname_TextBox.Text = "";
+            ID_no_TextBox.Text = "";
+            maidenName_textBox.Text = "";
+            occupation_textBox.Text = "";
+            qualification_textBox.Text = "";
+            durationOfCourse_textBox.Text = "";
+            grossIncome_textBox.Text = "";
+            tb_NameOfRep.Text = "";
+            tb_FSPName.Text = "";
+            tb_FSPNo.Text = "";
+
+            replacementPolicyAdvice_cb.Checked = false;
+            cb_replacementAdvice.Checked = false;
+
+            gb_CreateForms.Enabled = false;
         }
     }
 }

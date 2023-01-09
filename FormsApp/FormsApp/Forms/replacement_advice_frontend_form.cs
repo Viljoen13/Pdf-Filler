@@ -38,10 +38,10 @@ namespace FormsApp
             if (!string.IsNullOrEmpty(tb_policy1.Text) && !policyDot.newPolicies.ContainsKey(tb_policy1.Text))
                 policyDot.newPolicies.Add(tb_policy1.Text, tb_insurer1.Text);
 
-            if (!string.IsNullOrEmpty(tb_policy2.Text) && !policyDot.newPolicies.ContainsKey(tb_policy1.Text))
+            if (!string.IsNullOrEmpty(tb_policy2.Text) && !policyDot.newPolicies.ContainsKey(tb_policy2.Text))
                 policyDot.newPolicies.Add(tb_policy2.Text, tb_insurer2.Text);
 
-            if (!string.IsNullOrEmpty(tb_policy3.Text) && !policyDot.newPolicies.ContainsKey(tb_policy1.Text))
+            if (!string.IsNullOrEmpty(tb_policy3.Text) && !policyDot.newPolicies.ContainsKey(tb_policy3.Text))
                 policyDot.newPolicies.Add(tb_policy3.Text, tb_insurer3.Text);
 
             if (!string.IsNullOrEmpty(tb_replacepolicy1.Text) && !policyDot.policyReplaced.ContainsKey(tb_replacepolicy1.Text))

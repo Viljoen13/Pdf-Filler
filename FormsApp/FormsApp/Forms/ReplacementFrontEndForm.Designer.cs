@@ -367,7 +367,7 @@
             this.Controls.Add(this.id_client_tb);
             this.Controls.Add(this.label1);
             this.Name = "ReplacementFrontEndForm";
-            this.Text = "ReplacementFrontEndForm";
+            this.Text = "Replacement Form";
             this.Load += new System.EventHandler(this.ReplacementFrontEndForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -47,21 +47,28 @@
             this.durationOfCourse_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Close_btn = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.createForms_btn = new System.Windows.Forms.Button();
             this.statementOfHealth_cb = new System.Windows.Forms.CheckBox();
             this.replacementPolicyAdvice_cb = new System.Windows.Forms.CheckBox();
             this.cb_replacementAdvice = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_FSPNo = new System.Windows.Forms.TextBox();
+            this.tb_NameOfRep = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tb_FSPName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tb_FSPNo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_NameOfRep = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.gb_CreateForms = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.gb_CreateForms.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Name_Label
@@ -84,11 +91,11 @@
             // 
             this.Basic_Information_Label.AutoSize = true;
             this.Basic_Information_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Basic_Information_Label.Location = new System.Drawing.Point(357, 9);
+            this.Basic_Information_Label.Location = new System.Drawing.Point(80, 11);
             this.Basic_Information_Label.Name = "Basic_Information_Label";
-            this.Basic_Information_Label.Size = new System.Drawing.Size(250, 32);
+            this.Basic_Information_Label.Size = new System.Drawing.Size(159, 32);
             this.Basic_Information_Label.TabIndex = 3;
-            this.Basic_Information_Label.Text = "Basic Information";
+            this.Basic_Information_Label.Text = "Main Page";
             // 
             // Surname_TextBox
             // 
@@ -124,9 +131,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(835, 36);
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 92);
+            this.button1.Size = new System.Drawing.Size(331, 92);
             this.button1.TabIndex = 8;
             this.button1.Text = "Import excel";
             this.button1.UseVisualStyleBackColor = true;
@@ -214,37 +226,22 @@
             // 
             // Close_btn
             // 
-            this.Close_btn.Location = new System.Drawing.Point(835, 232);
+            this.Close_btn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Close_btn.FlatAppearance.BorderSize = 0;
+            this.Close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Close_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close_btn.Location = new System.Drawing.Point(0, 472);
             this.Close_btn.Name = "Close_btn";
-            this.Close_btn.Size = new System.Drawing.Size(188, 87);
+            this.Close_btn.Size = new System.Drawing.Size(331, 87);
             this.Close_btn.TabIndex = 19;
             this.Close_btn.Text = "Close";
             this.Close_btn.UseVisualStyleBackColor = true;
             this.Close_btn.Click += new System.EventHandler(this.Close_btn_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(397, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 16);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Create following forms:";
-            // 
-            // createForms_btn
-            // 
-            this.createForms_btn.Location = new System.Drawing.Point(835, 134);
-            this.createForms_btn.Name = "createForms_btn";
-            this.createForms_btn.Size = new System.Drawing.Size(188, 92);
-            this.createForms_btn.TabIndex = 23;
-            this.createForms_btn.Text = "Create forms";
-            this.createForms_btn.UseVisualStyleBackColor = true;
-            this.createForms_btn.Click += new System.EventHandler(this.createForms_btn_Click);
-            // 
             // statementOfHealth_cb
             // 
             this.statementOfHealth_cb.AutoSize = true;
-            this.statementOfHealth_cb.Location = new System.Drawing.Point(391, 121);
+            this.statementOfHealth_cb.Location = new System.Drawing.Point(18, 37);
             this.statementOfHealth_cb.Name = "statementOfHealth_cb";
             this.statementOfHealth_cb.Size = new System.Drawing.Size(142, 20);
             this.statementOfHealth_cb.TabIndex = 24;
@@ -254,7 +251,7 @@
             // replacementPolicyAdvice_cb
             // 
             this.replacementPolicyAdvice_cb.AutoSize = true;
-            this.replacementPolicyAdvice_cb.Location = new System.Drawing.Point(391, 148);
+            this.replacementPolicyAdvice_cb.Location = new System.Drawing.Point(18, 63);
             this.replacementPolicyAdvice_cb.Name = "replacementPolicyAdvice_cb";
             this.replacementPolicyAdvice_cb.Size = new System.Drawing.Size(193, 20);
             this.replacementPolicyAdvice_cb.TabIndex = 25;
@@ -265,7 +262,7 @@
             // cb_replacementAdvice
             // 
             this.cb_replacementAdvice.AutoSize = true;
-            this.cb_replacementAdvice.Location = new System.Drawing.Point(391, 174);
+            this.cb_replacementAdvice.Location = new System.Drawing.Point(18, 89);
             this.cb_replacementAdvice.Name = "cb_replacementAdvice";
             this.cb_replacementAdvice.Size = new System.Drawing.Size(149, 20);
             this.cb_replacementAdvice.TabIndex = 26;
@@ -291,7 +288,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.qualification_textBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
+            this.groupBox1.Location = new System.Drawing.Point(13, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(339, 359);
             this.groupBox1.TabIndex = 27;
@@ -306,12 +303,44 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.tb_FSPName);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(12, 386);
+            this.groupBox2.Location = new System.Drawing.Point(13, 386);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(339, 161);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Company Information";
+            // 
+            // tb_FSPNo
+            // 
+            this.tb_FSPNo.Location = new System.Drawing.Point(158, 112);
+            this.tb_FSPNo.Name = "tb_FSPNo";
+            this.tb_FSPNo.Size = new System.Drawing.Size(136, 22);
+            this.tb_FSPNo.TabIndex = 32;
+            // 
+            // tb_NameOfRep
+            // 
+            this.tb_NameOfRep.Location = new System.Drawing.Point(158, 32);
+            this.tb_NameOfRep.Name = "tb_NameOfRep";
+            this.tb_NameOfRep.Size = new System.Drawing.Size(136, 22);
+            this.tb_NameOfRep.TabIndex = 34;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "FSP Number";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 16);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Name of representative";
             // 
             // tb_FSPName
             // 
@@ -329,62 +358,85 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "FSP Name";
             // 
-            // tb_FSPNo
+            // btn_Clear
             // 
-            this.tb_FSPNo.Location = new System.Drawing.Point(158, 112);
-            this.tb_FSPNo.Name = "tb_FSPNo";
-            this.tb_FSPNo.Size = new System.Drawing.Size(136, 22);
-            this.tb_FSPNo.TabIndex = 32;
+            this.btn_Clear.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_Clear.FlatAppearance.BorderSize = 0;
+            this.btn_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clear.Location = new System.Drawing.Point(0, 385);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(331, 87);
+            this.btn_Clear.TabIndex = 29;
+            this.btn_Clear.Text = "Clear";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
-            // label9
+            // gb_CreateForms
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 16);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "FSP Number";
+            this.gb_CreateForms.Controls.Add(this.statementOfHealth_cb);
+            this.gb_CreateForms.Controls.Add(this.replacementPolicyAdvice_cb);
+            this.gb_CreateForms.Controls.Add(this.cb_replacementAdvice);
+            this.gb_CreateForms.Location = new System.Drawing.Point(46, 96);
+            this.gb_CreateForms.Name = "gb_CreateForms";
+            this.gb_CreateForms.Size = new System.Drawing.Size(242, 131);
+            this.gb_CreateForms.TabIndex = 30;
+            this.gb_CreateForms.TabStop = false;
+            this.gb_CreateForms.Text = "Create following forms";
             // 
-            // tb_NameOfRep
+            // panel1
             // 
-            this.tb_NameOfRep.Location = new System.Drawing.Point(158, 32);
-            this.tb_NameOfRep.Name = "tb_NameOfRep";
-            this.tb_NameOfRep.Size = new System.Drawing.Size(136, 22);
-            this.tb_NameOfRep.TabIndex = 34;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(386, 559);
+            this.panel1.TabIndex = 31;
             // 
-            // label10
+            // panel2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(2, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 16);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Name of representative";
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_Clear);
+            this.panel2.Controls.Add(this.Close_btn);
+            this.panel2.Location = new System.Drawing.Point(707, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(331, 559);
+            this.panel2.TabIndex = 32;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.gb_CreateForms);
+            this.panel3.Controls.Add(this.Basic_Information_Label);
+            this.panel3.Location = new System.Drawing.Point(384, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(326, 559);
+            this.panel3.TabIndex = 33;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 559);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cb_replacementAdvice);
-            this.Controls.Add(this.replacementPolicyAdvice_cb);
-            this.Controls.Add(this.statementOfHealth_cb);
-            this.Controls.Add(this.createForms_btn);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.Close_btn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Basic_Information_Label);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Main page";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.gb_CreateForms.ResumeLayout(false);
+            this.gb_CreateForms.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -409,8 +461,6 @@
         private System.Windows.Forms.TextBox durationOfCourse_textBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Close_btn;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button createForms_btn;
         private System.Windows.Forms.CheckBox statementOfHealth_cb;
         private System.Windows.Forms.CheckBox replacementPolicyAdvice_cb;
         private System.Windows.Forms.CheckBox cb_replacementAdvice;
@@ -422,6 +472,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_FSPNo;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btn_Clear;
+        private System.Windows.Forms.GroupBox gb_CreateForms;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

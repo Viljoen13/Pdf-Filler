@@ -71,7 +71,7 @@ namespace FormsApp
                 fsp_no_tb.Text = policyDot.fspNo;
 
             List<TextBox> newPolicies = new List<TextBox> { tb_policy1, tb_policy2, tb_policy3 };
-            List<TextBox> newInsurer = new List<TextBox> { tb_insurer1, tb_insurer3, tb_insurer3 };
+            List<TextBox> newInsurer = new List<TextBox> { tb_insurer1, tb_insurer2, tb_insurer3 };
             List<TextBox> replacePolicies = new List<TextBox> { tb_replacepolicy1, tb_replacepolicy2, tb_replacepolicy3 };
             List<TextBox> replaceInsurer = new List<TextBox> { tb_replaceinsurer1, tb_replaceinsurer2, tb_replaceinsurer3 };
 
