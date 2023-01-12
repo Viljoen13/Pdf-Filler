@@ -53,10 +53,13 @@ namespace FormsApp
                 firstYearCommision = tb_firstCommision.Text,
                 caseSubmitted = cb_caseSubmitted.Checked,
                 clientFamily = cb_clientFamily.Checked,
-                moreThanMonth = cb_MoreThanMonth.Checked
+                moreThanMonth = cb_MoreThanMonth.Checked,
+                motivation = tb_motivation.Text
             };
 
             _ = new excelFileWriter(data);
+
+            this.Close();
         }
 
         private void OddsExcel_Load(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_create = new System.Windows.Forms.Button();
             this.tb_planNum = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,11 +66,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cb_stopOrder = new System.Windows.Forms.CheckBox();
             this.cb_debit = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tb_motivation = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(891, 513);
+            this.btn_create.Location = new System.Drawing.Point(870, 512);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(208, 118);
             this.btn_create.TabIndex = 2;
@@ -385,7 +390,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(85, 274);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(134, 20);
+            this.label13.Size = new System.Drawing.Size(107, 16);
             this.label13.TabIndex = 58;
             this.label13.Text = "payment method";
             // 
@@ -411,12 +416,36 @@
             this.cb_debit.Text = "Debit";
             this.cb_debit.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(715, 284);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(363, 16);
+            this.label14.TabIndex = 61;
+            this.label14.Text = "Motivation from advisor why the policy will stay on the books:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // tb_motivation
+            // 
+            this.tb_motivation.Location = new System.Drawing.Point(718, 308);
+            this.tb_motivation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_motivation.Multiline = true;
+            this.tb_motivation.Name = "tb_motivation";
+            this.tb_motivation.Size = new System.Drawing.Size(360, 177);
+            this.tb_motivation.TabIndex = 62;
+            // 
             // OddsExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1146, 677);
+            this.Controls.Add(this.tb_motivation);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.cb_debit);
             this.Controls.Add(this.cb_stopOrder);
             this.Controls.Add(this.label13);
@@ -457,6 +486,7 @@
             this.Name = "OddsExcel";
             this.Text = "OddsExcel";
             this.Load += new System.EventHandler(this.OddsExcel_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +530,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox cb_stopOrder;
         private System.Windows.Forms.CheckBox cb_debit;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox tb_motivation;
     }
 }

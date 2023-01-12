@@ -30,5 +30,6 @@ namespace FormsApp.entities
         public Boolean caseSubmitted { get; set; }
         public Boolean clientFamily { get; set; }
         public Boolean moreThanMonth { get; set; }
+        public string motivation { get; set; }
     }
 }
