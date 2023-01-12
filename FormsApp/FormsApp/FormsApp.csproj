@@ -132,6 +132,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\2007_AEB_E_Enity.cs" />
     <Compile Include="entities\replacementEntity.cs" />
     <Compile Include="entities\replacementLongEntity.cs" />
     <Compile Include="entities\replacementShortEntity.cs" />
