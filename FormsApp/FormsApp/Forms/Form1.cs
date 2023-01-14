@@ -237,5 +237,19 @@ namespace FormsApp
 
             this.Show();
         }
+
+        private void AEB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_AEB.Checked == false)
+                return;
+
+            this.Hide();
+
+            AEB_E_form aEB_E_Form = new AEB_E_form(persons);
+
+            aEB_E_Form.ShowDialog();
+
+            this.Show();
+        }
     }
 }
