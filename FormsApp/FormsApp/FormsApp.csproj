@@ -148,16 +148,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\2007_AEB_E_Enity.cs" />
     <Compile Include="entities\oddsExcelEntity.cs" />
     <Compile Include="entities\replacementEntity.cs" />
     <Compile Include="entities\replacementLongEntity.cs" />
     <Compile Include="entities\replacementShortEntity.cs" />
     <Compile Include="entities\GeneralInfoEntity.cs" />
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\AEB_E_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\AEB_E_form.Designer.cs">
+      <DependentUpon>AEB_E_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
@@ -186,13 +187,14 @@
     <Compile Include="Forms\replacement_advice_frontend_form.Designer.cs">
       <DependentUpon>replacement_advice_frontend_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="service\AEBFileWriter.cs" />
     <Compile Include="service\excelFileWriter.cs" />
     <Compile Include="service\replacementFileWriter.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AEB_E_form.resx">
+      <DependentUpon>AEB_E_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OddsExcel.resx">
       <DependentUpon>OddsExcel.cs</DependentUpon>
