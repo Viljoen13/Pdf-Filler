@@ -71,7 +71,7 @@ namespace formsApp.service
             try
             {
                 reader = new PdfReader(Path + "\\replacement_POLICY_ADVICE.pdf");
-                writer = new PdfWriter(Path + "\\replacement_POLICY_ADVICE_FILLED.pdf");
+                writer = new PdfWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"\\{info.nameSurname.Replace(' ', '-')}\\replacement_POLICY_ADVICE_FILLED.pdf");
             }
             catch (IOException e)
             {
@@ -139,7 +139,7 @@ namespace formsApp.service
         {
             if (check)
             {
-                PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fieldName).SetCheckType(checkStyle).SetValue("");
+                PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fieldName).SetCheckType(checkStyle).SetValue("True");
             }
         }
     }

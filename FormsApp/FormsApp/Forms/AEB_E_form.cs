@@ -58,7 +58,8 @@ namespace FormsApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            contactCB.Enabled = false;
+            contactNoCB.Enabled = false;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)

@@ -123,6 +123,20 @@ namespace FormsApp
             durationOfCourse_textBox.Text = persons[0].durationOfCourse;
             grossIncome_textBox.Text = persons[0].grossIncome;
 
+            //try and create folder on desktop
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"\\{persons[0].name}-{persons[0].surname}";
+
+            // Try to create the folder
+            try
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not create folder on your Desktop");
+                return;
+            }
+
             gb_CreateForms.Enabled = true;
         }
 
@@ -134,6 +148,10 @@ namespace FormsApp
         private void Form1_Load(object sender, EventArgs e)
         {
             gb_CreateForms.Enabled = false;
+            statementOfHealth_cb.Enabled = false;
+            cb_replacementAdvice.Enabled = false;
+            
+
         }
 
         private void replacementPolicyAdvice_cb_CheckedChanged_1(object sender, EventArgs e)
@@ -215,7 +233,13 @@ namespace FormsApp
             replacementPolicyAdvice_cb.Checked = false;
             cb_replacementAdvice.Checked = false;
 
+            statementOfHealth_cb.Checked = false;
+            replacementPolicyAdvice_cb.Checked = false;
+            cb_replacementAdvice.Checked = false;
+            cb_OddsExcel.Checked = false;
+            cb_AEB.Checked = false;
             gb_CreateForms.Enabled = false;
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

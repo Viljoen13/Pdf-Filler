@@ -17,12 +17,12 @@ namespace FormsApp.service
         private static readonly string id = "IDnrPaspoortnr";
         private static readonly string permitCB = "Check Box3";
         private static readonly string productCB = "Check Box30";
-        private static readonly string investmentCB= "Check Box35";
-        private static readonly string policyPlan1= "PolisPlannaam";
+        private static readonly string investmentCB = "Check Box35";
+        private static readonly string policyPlan1 = "PolisPlannaam";
         //private static readonly string = "PolisPlannaam.3";
         //private static readonly string = "PolisPlannaam.4";
         //private static readonly string = "PolisPlannaam.5";
-        private static readonly string policyPlan2= "PolisPlannommer";
+        private static readonly string policyPlan2 = "PolisPlannommer";
         //private static readonly string = "PolisPlannommer.1";
         //private static readonly string = "PolisPlannommer.2";
         //private static readonly string = "PolisPlannommer.3";
@@ -73,7 +73,7 @@ namespace FormsApp.service
         //private static readonly string = "SignatureField9";
         //private static readonly string = "NamSurnam";
         //private static readonly string = "IntCodee";
-        //private static readonly string = "Check Box111";
+        //private static readonly string contactYes = "Check Box111";
         private static readonly string contactYes = "Check Box111.1";
         private static readonly string contactNo = "Check Box111.2";
         private static readonly string initialofSpouse = "ID_5qParaaf";
@@ -83,7 +83,7 @@ namespace FormsApp.service
         //private static readonly string = "Place7";
         //private static readonly string = "Date7";
         private static readonly string fee = "AdviseFee";
-        private static readonly string nameOfEmployer= "Naam van werkgewer";
+        private static readonly string nameOfEmployer = "Naam van werkgewer";
         private static readonly string dateStart = "Die werknemer was in diens van die werkgewer vanaf";
         private static readonly string dateEnd = "DDMMEEJJ tot";
         //private static readonly string = "SignatureField10";
@@ -101,10 +101,11 @@ namespace FormsApp.service
 
             PdfReader reader = null;
             PdfWriter writer = null;
+
             try
             {
                 reader = new PdfReader(Path + "\\2007_AEB_E.pdf");
-                writer = new PdfWriter(Path + "\\2007_AEB_E_FILLED.pdf");
+                writer = new PdfWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"\\{info.name.Replace(' ', '-')}\\2007_AEB_E_FILLED.pdf");
             }
             catch (IOException e)
             {
@@ -117,9 +118,9 @@ namespace FormsApp.service
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(name).SetValue(info.name);
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(id).SetValue(info.id);
 
-            checkboxFill(pdfDocument,permitCB,1,info.permitCheck);
-            checkboxFill(pdfDocument, productCB, 1, info.productCheck);
-            checkboxFill(pdfDocument, investmentCB, 1, info.investmentCheck);
+            checkboxFill(pdfDocument,permitCB, 3,info.permitCheck);
+            checkboxFill(pdfDocument, productCB, 3, info.productCheck);
+            checkboxFill(pdfDocument, investmentCB, 3, info.investmentCheck);
 
 
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(policyPlan1).SetValue(info.policyPlanNo[0]);
@@ -139,8 +140,8 @@ namespace FormsApp.service
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(nameOfEmployer).SetValue(info.nameOfEmployer);
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(nameOfSpouse).SetValue(info.nameOfSpouse);
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(initialofSpouse).SetValue(info.directContactInitials);
-            checkboxFill(pdfDocument, contactYes, 1, info.contactYes);
-            checkboxFill(pdfDocument, contactNo, 1, info.contactNo);
+            checkboxFill(pdfDocument, contactYes, 3, info.contactYes);
+            checkboxFill(pdfDocument, contactNo, 3, info.contactNo);
 
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(idOfSpouse).SetValue(info.idOfSpouse);
             PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(dateStart).SetValue(info.startDate);
@@ -154,7 +155,7 @@ namespace FormsApp.service
         {
             if (check)
             {
-                PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fieldName).SetCheckType(checkStyle).SetValue("");
+                PdfAcroForm.GetAcroForm(pdfDocument, true).GetField(fieldName).SetCheckType(checkStyle).SetValue("True");
             }
         }
     }

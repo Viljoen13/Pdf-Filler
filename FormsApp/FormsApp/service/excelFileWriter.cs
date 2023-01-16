@@ -102,7 +102,7 @@ namespace FormsApp.service
 
                 excelWorksheet.Cells[24, 1].Value = "Motivation from advisor why the policy will stay on the books: " + info.motivation;
 
-                excelPackage.SaveAs(Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\resources\\" + "Testing.xlsx");
+                excelPackage.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"\\{info.nameSurname.Replace(' ','-')}\\ODDS.xlsx");
             }
 
             MessageBox.Show("Excel document was successfully made");
