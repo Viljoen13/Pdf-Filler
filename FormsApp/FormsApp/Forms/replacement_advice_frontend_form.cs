@@ -34,7 +34,6 @@ namespace FormsApp
 
         private void make_replacement_btn_Click(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(tb_policy1.Text) && !policyDot.newPolicies.ContainsKey(tb_policy1.Text))
                 policyDot.newPolicies.Add(tb_policy1.Text, tb_insurer1.Text);
 

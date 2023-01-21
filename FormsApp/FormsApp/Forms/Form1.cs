@@ -84,10 +84,7 @@ namespace FormsApp
                         occupation = person1.FirstOrDefault(c => c.Key == "Occupation").Value,
                         qualification = person1.FirstOrDefault(c => c.Key == "Qualification").Value,
                         durationOfCourse = person1.FirstOrDefault(c => c.Key == "Duration of Course").Value,
-                        grossIncome = person1.FirstOrDefault(c => c.Key == "Gross income").Value,
-                        nameOfRepresentative = string.IsNullOrEmpty(tb_NameOfRep.Text) ? tb_NameOfRep.Text : "",
-                        fspName = string.IsNullOrEmpty(tb_FSPName.Text) ? tb_FSPName.Text : "",
-                        fspNumber = string.IsNullOrEmpty(tb_FSPNo.Text) ? tb_FSPNo.Text : ""
+                        grossIncome = person1.FirstOrDefault(c => c.Key == "Gross income").Value
                     };
 
                     GeneralInfoEntity oPerson2 = new GeneralInfoEntity
@@ -99,10 +96,7 @@ namespace FormsApp
                         occupation = person2.FirstOrDefault(c => c.Key == "Occupation").Value,
                         qualification = person2.FirstOrDefault(c => c.Key == "Qualification").Value,
                         durationOfCourse = person2.FirstOrDefault(c => c.Key == "Duration of Course").Value,
-                        grossIncome = person2.FirstOrDefault(c => c.Key == "Gross income").Value,
-                        nameOfRepresentative = string.IsNullOrEmpty(tb_NameOfRep.Text) ? tb_NameOfRep.Text : "",
-                        fspName = string.IsNullOrEmpty(tb_FSPName.Text) ? tb_FSPName.Text : "",
-                        fspNumber = string.IsNullOrEmpty(tb_FSPNo.Text) ? tb_FSPNo.Text : ""
+                        grossIncome = person2.FirstOrDefault(c => c.Key == "Gross income").Value
                     };
 
                     persons.Add(oPerson1);
@@ -150,8 +144,6 @@ namespace FormsApp
             gb_CreateForms.Enabled = false;
             statementOfHealth_cb.Enabled = false;
             cb_replacementAdvice.Enabled = false;
-            
-
         }
 
         private void replacementPolicyAdvice_cb_CheckedChanged_1(object sender, EventArgs e)
@@ -254,6 +246,10 @@ namespace FormsApp
             }
 
             this.Hide();
+
+            persons[0].nameOfRepresentative = !string.IsNullOrEmpty(tb_NameOfRep.Text) ? tb_NameOfRep.Text : "";
+            persons[0].fspName = !string.IsNullOrEmpty(tb_FSPName.Text) ? tb_NameOfRep.Text : "";
+            persons[0].fspNumber = !string.IsNullOrEmpty(tb_FSPNo.Text) ? tb_NameOfRep.Text : "";
 
             OddsExcel oddsExcelForm = new OddsExcel(persons);
 

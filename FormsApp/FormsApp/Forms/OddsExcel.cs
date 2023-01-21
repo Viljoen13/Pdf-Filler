@@ -66,6 +66,11 @@ namespace FormsApp
         {
             name_surname_tb.Text = $"{pInfo.name} {pInfo.surname}";
             name_of_rep_tb.Text = pInfo.nameOfRepresentative;
+            tb_occupation.Text = pInfo.occupation;
+            tb_qualification.Text = pInfo.qualification;
+            tb_monthlyIncome.Text = pInfo.grossIncome;
+            name_of_rep_tb.Text = pInfo.nameOfRepresentative;
+            tb_code.Text = pInfo.fspNumber;
 
         }
     }
