@@ -406,7 +406,7 @@
             this.gb_CreateForms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gb_CreateForms.Name = "gb_CreateForms";
             this.gb_CreateForms.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_CreateForms.Size = new System.Drawing.Size(243, 162);
+            this.gb_CreateForms.Size = new System.Drawing.Size(243, 160);
             this.gb_CreateForms.TabIndex = 30;
             this.gb_CreateForms.TabStop = false;
             this.gb_CreateForms.Text = "Create following forms";
@@ -415,11 +415,11 @@
             // 
             this.cb_AEB.AutoSize = true;
             this.cb_AEB.Location = new System.Drawing.Point(19, 138);
-            this.cb_AEB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_AEB.Margin = new System.Windows.Forms.Padding(4);
             this.cb_AEB.Name = "cb_AEB";
-            this.cb_AEB.Size = new System.Drawing.Size(56, 20);
+            this.cb_AEB.Size = new System.Drawing.Size(57, 20);
             this.cb_AEB.TabIndex = 28;
-            this.cb_AEB.Text = "AEB";
+            this.cb_AEB.Text = "2007";
             this.cb_AEB.UseVisualStyleBackColor = true;
             this.cb_AEB.CheckedChanged += new System.EventHandler(this.AEB_CheckedChanged);
             // 
